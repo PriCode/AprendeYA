@@ -1,0 +1,50 @@
+2014/12/02 17:58:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/vagrant/uni/aprendeYa/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/vagrant/uni/aprendeYa/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/vagrant/uni/aprendeYa/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/vagrant/uni/aprendeYa/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/vagrant/uni/aprendeYa/appAprendeYa/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/appAprendeYa/?r=gii
+---
+2014/12/02 17:59:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/vagrant/uni/aprendeYa/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/vagrant/uni/aprendeYa/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/vagrant/uni/aprendeYa/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/vagrant/uni/aprendeYa/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/vagrant/uni/aprendeYa/appAprendeYa/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/appAprendeYa/index.php?r=gii
+---
+2014/12/02 17:59:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/vagrant/uni/aprendeYa/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/vagrant/uni/aprendeYa/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/vagrant/uni/aprendeYa/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/vagrant/uni/aprendeYa/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/vagrant/uni/aprendeYa/appAprendeYa/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/appAprendeYa/index.php?r=gii
+---
+2014/12/02 18:01:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/vagrant/uni/aprendeYa/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/vagrant/uni/aprendeYa/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/vagrant/uni/aprendeYa/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/vagrant/uni/aprendeYa/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/vagrant/uni/aprendeYa/appAprendeYa/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/appAprendeYa/index.php?r=gii
+---
+2014/12/02 18:01:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/vagrant/uni/aprendeYa/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/vagrant/uni/aprendeYa/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/vagrant/uni/aprendeYa/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/vagrant/uni/aprendeYa/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/vagrant/uni/aprendeYa/appAprendeYa/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/appAprendeYa/index.php?r=gii
+---
