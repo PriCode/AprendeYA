@@ -1,25 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "Usuario".
+ * This is the model class for table "Logueo".
  *
- * The followings are the available columns in table 'Usuario':
+ * The followings are the available columns in table 'Logueo':
+ * @property string $id_logueo
+ * @property string $fecha
+ * @property string $hora_entrada
+ * @property string $hora_salida
  * @property string $id_usuario
- * @property string $usuario
- * @property string $dni
- * @property string $email
- * @property string $id_tipo
- * @property string $id_pass
- * @property string $id_perfil
  */
-class Usuario extends CActiveRecord
+class Logueo extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'Usuario';
+		return 'Logueo';
 	}
 
 	/**
@@ -30,14 +28,12 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_usuario, dni, email', 'required'),
-			array('id_usuario, id_pass, id_perfil', 'length', 'max'=>5),
-			array('usuario, email', 'length', 'max'=>20),
-			array('dni', 'length', 'max'=>8),
-			array('id_tipo', 'length', 'max'=>5),
+			array('id_logueo', 'required'),
+			array('id_logueo, id_usuario', 'length', 'max'=>5),
+			array('fecha, hora_entrada, hora_salida', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_usuario, usuario, dni, email, id_tipo, id_pass, id_perfil', 'safe', 'on'=>'search'),
+			array('id_logueo, fecha, hora_entrada, hora_salida, id_usuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,13 +54,11 @@ class Usuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'id_logueo' => 'Id Logueo',
+			'fecha' => 'Fecha',
+			'hora_entrada' => 'Hora Entrada',
+			'hora_salida' => 'Hora Salida',
 			'id_usuario' => 'Id Usuario',
-			'usuario' => 'Usuario',
-			'dni' => 'Dni',
-			'email' => 'Email',
-			'id_tipo' => 'Id Tipo',
-			'id_pass' => 'Id Pass',
-			'id_perfil' => 'Id Perfil',
 		);
 	}
 
@@ -86,13 +80,11 @@ class Usuario extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('id_logueo',$this->id_logueo,true);
+		$criteria->compare('fecha',$this->fecha,true);
+		$criteria->compare('hora_entrada',$this->hora_entrada,true);
+		$criteria->compare('hora_salida',$this->hora_salida,true);
 		$criteria->compare('id_usuario',$this->id_usuario,true);
-		$criteria->compare('usuario',$this->usuario,true);
-		$criteria->compare('dni',$this->dni,true);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('id_tipo',$this->id_tipo,true);
-		$criteria->compare('id_pass',$this->id_pass,true);
-		$criteria->compare('id_perfil',$this->id_perfil,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -103,7 +95,7 @@ class Usuario extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Usuario the static model class
+	 * @return Logueo the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

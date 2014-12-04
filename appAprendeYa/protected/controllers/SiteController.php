@@ -27,7 +27,20 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$sesion=new Sesion();		
+		$aSesion= Sesion::model()->findAll();
+
+		/*$experto=new Experto();
+		$aExperto=Experto::model()->findById();
+
+
+
+		$expertoSesion=new SesionExperto();
+		$aExpertoSesion=SesionExperto::model()-->
+*/
+
+
+		$this->render('index',array('sesiones'=>$aSesion));
 	}
 
 	/**
