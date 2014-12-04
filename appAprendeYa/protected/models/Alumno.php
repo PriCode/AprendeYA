@@ -73,6 +73,10 @@ class Alumno extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		/*$criteria->select='id_sesion';
+		$criteria->condition='id_alumno=:id_alumno';
+		$criteria->params=array('=:id_alumno'=>'A0002');
+		$sesion = Alumno::model()->find($criteria);*/
 		$criteria->compare('id_alumno',$this->id_alumno,true);
 		$criteria->compare('id_usuario',$this->id_usuario,true);
 
