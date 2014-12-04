@@ -25,22 +25,17 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$sesion=new Sesion();		
+		
 		$aSesion= Sesion::model()->findAll();
+		
+		$expertos=Experto::model()->findAll();
+		
+		//$anUsuario=Usuario::model()->findById();
 
-		/*$experto=new Experto();
-		$aExperto=Experto::model()->findById();
-
-
-
-		$expertoSesion=new SesionExperto();
-		$aExpertoSesion=SesionExperto::model()-->
-*/
+		
 
 
-		$this->render('index',array('sesiones'=>$aSesion));
+		$this->render('index',array('sesiones'=>$aSesion, 'expertos'=>$expertos));
 	}
 
 	/**
