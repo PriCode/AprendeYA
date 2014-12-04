@@ -26,16 +26,25 @@ class SiteController extends Controller
 	public function actionIndex()
 	{
 		
-		$aSesion= Sesion::model()->findAll();
-		
-		$expertos=Experto::model()->findAll();
-		
-		//$anUsuario=Usuario::model()->findById();
+		$sesiones_lista= Sesion::model()->findAll();		
+		$expertos_lista=Experto::model()->findAll();
+		$expertos=new Experto();				
 
-		
+		$nombre_expertos=$expertos->experto2usuario;
+
+				
+		$this->render('index',array('sesiones'=>$sesiones_lista, 'expertos'=>$expertos_lista, 'nombre_expertos'=>$nombre_expertos));
+/*
+
+		$post=Post::model()->find(array(
+		    'select'=>'title',
+		    'condition'=>'postID=:postID',
+		    'params'=>array(':postID'=>10),
+		));
+
+*/
 
 
-		$this->render('index',array('sesiones'=>$aSesion, 'expertos'=>$expertos));
 	}
 
 	/**

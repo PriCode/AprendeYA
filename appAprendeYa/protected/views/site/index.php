@@ -32,12 +32,20 @@ $this->pageTitle=Yii::app()->name;
 <?php  	
 	$html="";
 	foreach ($expertos as $experto) {
-		$html.="<tr><td>".$experto->id_Experto."</td><td>".$experto->nivel_actividad."</td></tr>"; 	
+		$html.="<tr><td>".$experto->id_usuario."</td><td>".$experto->nivel_actividad."</td></tr>"; 	
 	}	
 	echo $html;
 ?>
 </table>
 </div>
+
+<h3>un  Expertos	</h3>
+<?php
+
+	echo var_dump($nombre_expertos);
+
+?>
+
 
 
 
