@@ -72,17 +72,24 @@ class Alumno extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
-		/*$criteria->select='id_sesion';
-		$criteria->condition='id_alumno=:id_alumno';
-		$criteria->params=array('=:id_alumno'=>'A0002');
-		$sesion = Alumno::model()->find($criteria);*/
 		$criteria->compare('id_alumno',$this->id_alumno,true);
 		$criteria->compare('id_usuario',$this->id_usuario,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+	public function list_alumnos(){
+		$criteria=new CDbCriteria;
+		$criteria->join = 'inner join Usuario U on t.id_usuario=U.id_usuario';
+		$criteria->select = 'U.usuario,U.email';
+		$data = $this->findall($criteria);
+		foreach ($data as $key ) {
+			print_r($key->attributes);
+		}
+		exit;
+		return $data;	
 	}
 
 	/**

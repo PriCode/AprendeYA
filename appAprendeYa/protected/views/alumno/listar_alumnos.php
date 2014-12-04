@@ -1,4 +1,4 @@
-<h1> Alumnos por Curso</h1>
+<h1> Lista de Alumnos</h1>
 
 <div>
 	<table style="width:100%">
@@ -7,8 +7,8 @@
 		</tr>
   			<?php foreach ($a as $key ) {
 				echo "<tr>";
-				echo "<td>".$key->id_alumno."</td>";
-				echo "<td>".$key->id_sesion."</td>";
+				echo "<td>".$key->usuario."</td>";
+				echo "<td>".$key->dni."</td>";
 				echo "</tr>";
 			}?>	
 	</table>

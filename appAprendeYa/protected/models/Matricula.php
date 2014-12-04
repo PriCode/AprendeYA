@@ -43,7 +43,7 @@ class Matricula extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'id_alumno' => 	array(self::HAS_ONE, 'Alumno','id_alumno');
+			//'id_alumno' => 	array(self::HAS_ONE, 'Alumno','id_alumno');
 		);
 	}
 
@@ -94,6 +94,20 @@ class Matricula extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Matricula the static model class
 	 */
+
+	public function findalumnos(){
+		$criteria = new CDbCriteria;
+		$criteria->join = 'left join Alumno B on t.id_alumno=B.id_alumno';
+		//$criteria->join = 'left join Sesion S on t.id_sesion=S.id_sesion';
+		$criteria->select = 't.id_alumno,t.id_sesion';
+		//S.titulo_sesion,S.desc_sesion
+		$data = $this->findall($criteria);
+		//print_r($data);
+		return $data;
+
+	}
+
+
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);

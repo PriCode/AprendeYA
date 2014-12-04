@@ -11,16 +11,11 @@ class MatriculaController extends Controller
 
 	public function actionTest()
 	{
-	    $dato = new Alumno;
-	    $dato=$dato->findAll();
-
+	    //$dato = new Alumno;
+	    $matricula = new Matricula;
+	    $dato = $matricula->findalumnos();
+	
 		$this->render('prueba', array('a'=>$dato));
-	}
-
-
-
-	public function actionAlumnosMatriculados(){
-		
 	}
 
 	// Uncomment the following methods and override them if needed

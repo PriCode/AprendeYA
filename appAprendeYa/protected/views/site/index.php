@@ -6,28 +6,46 @@ $this->pageTitle=Yii::app()->name;
 
 <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
-<p>
-<h3>Aqui podras aprender todos los temas de tu interes con los mejores expertos del pais</h3>
-<h3>Ven y echa un visazo a las proximas sesiones!!!</h3>
-</p>
+<p>Aqui podras aprender todos los temas de tu interes con los mejores expertos del pais</p>
+<p>Ven y echa un visazo a las proximas sesiones!!!</p>
 
-<p>
-	Lista de sesiones proximas
 
-</p>
-<?php  
-	echo "<table width=\"210px\" border=\"solid\"><thead><td>Experto</td><td>Titulo</td><td> Descripcion</td></thead>";
+<h3>Lista de sesiones proximas</h3>
+
+<div>
+<table width="210px" border="solid"><thead><td>Titulo</td><td> Descripcion</td></thead>
+<?php  	
+	$html="";
 	foreach ($sesiones as $key) {
-		echo "<tr><td>".$key->titulo_sesion."</td><td>".$key->desc_sesion."</td></tr>"; 	
-	}
-	echo "</table>";
+		$html.="<tr><td>".$key->titulo_sesion."</td><td>".$key->desc_sesion."</td></tr>"; 	
+	}	
+	echo $html;
+?>
+</table>
+</div>
+
+
+<h3>Nuestros  Expertos	</h3>
+
+<div>
+<table width="210px" border="solid"><thead><td>Nombre</td><td> Nivel de Actividad</td></thead>
+<?php  	
+	$html="";
+	foreach ($expertos as $experto) {
+		$html.="<tr><td>".$experto->id_usuario."</td><td>".$experto->nivel_actividad."</td></tr>"; 	
+	}	
+	echo $html;
+?>
+</table>
+</div>
+
+<h3>un  Expertos	</h3>
+<?php
+
+	echo var_dump($nombre_expertos);
+
 ?>
 
-
-
-<p>
-	Lista de sesiones proximas
-</p>
 
 
 

@@ -19,12 +19,21 @@ class AlumnoController extends Controller
 		);
 	}
 
+	public function actionList()
+	{
+	    $dato = new Alumno;
+	    //$matricula = new Matricula;
+	    $info = $dato->list_alumnos();
+	
+		$this->render('listar_alumnos', array('a'=>$info));
+	}
+
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+	/*public function accessRules()
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
@@ -43,7 +52,7 @@ class AlumnoController extends Controller
 				'users'=>array('*'),
 			),
 		);
-	}
+	}**/
 
 	/**
 	 * Displays a particular model.
