@@ -57,7 +57,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=aprendeya',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '.-dogzilla.-',
+			'password' => '123456',
 			'charset' => 'utf8',
 		),
 		

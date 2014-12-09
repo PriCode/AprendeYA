@@ -9,6 +9,7 @@
  * @property integer $nro_sesion
  * @property string $id_aceptacion
  * @property string $id_usuario
+ * @property double $calificacion
  */
 class Experto extends CActiveRecord
 {
@@ -30,10 +31,11 @@ class Experto extends CActiveRecord
 		return array(
 			array('id_Experto, id_usuario', 'required'),
 			array('nivel_actividad, nro_sesion', 'numerical', 'integerOnly'=>true),
+			array('calificacion', 'numerical'),
 			array('id_Experto, id_aceptacion, id_usuario', 'length', 'max'=>5),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_Experto, nivel_actividad, nro_sesion, id_aceptacion, id_usuario', 'safe', 'on'=>'search'),
+			array('id_Experto, nivel_actividad, nro_sesion, id_aceptacion, id_usuario, calificacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,10 +46,7 @@ class Experto extends CActiveRecord
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
-		return array(
-
-			'experto2usuario'=>array(self::BELONGS_TO,'Usuario','id_usuario'),
-
+		return array('experto2usuario'=>array(self::BELONGS_TO,'Usuario','id_usuario'),
 		);
 	}
 
@@ -62,6 +61,7 @@ class Experto extends CActiveRecord
 			'nro_sesion' => 'Nro Sesion',
 			'id_aceptacion' => 'Id Aceptacion',
 			'id_usuario' => 'Id Usuario',
+			'calificacion' => 'Calificacion',
 		);
 	}
 
@@ -88,6 +88,7 @@ class Experto extends CActiveRecord
 		$criteria->compare('nro_sesion',$this->nro_sesion);
 		$criteria->compare('id_aceptacion',$this->id_aceptacion,true);
 		$criteria->compare('id_usuario',$this->id_usuario,true);
+		$criteria->compare('calificacion',$this->calificacion);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
