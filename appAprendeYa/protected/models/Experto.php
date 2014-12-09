@@ -96,24 +96,6 @@ class Experto extends CActiveRecord
 	}
 	
 	public function listExperto(){
-		//$criteria=new CDbCriteria;
-		//$criteria->join = 'inner join Usuario u on t.id_usuario=u.id_usuario';
-		//$criteria->select = 'u.id_usuario,u.usuario, t.calificacion';
-		//$criteria->select = 'u.*';
-		//$data = $this->findall($criteria);
-	 
-		/*foreach ($data as $key ) {
-				print_r($key->attributes);
-		}
-		exit;*/
-		/*$user = Yii::app()->db->createCommand()
-	        ->select('u.id_usuario, u.usuario,e.calificacion')
-	        ->from('Experto e')
-		->join('Usuario u', 'e.id_usuario=u.id_usuario')
-		->where('e.id_usuario = :value1' , array(':value1' => $value1))	
-		
-		//->where('e.id_usuario=:u.id_usuario')
-		->queryRow();*/
 		$exper=new Experto;
 		$exper=Experto::model()->findAll();
 		$user=array();
