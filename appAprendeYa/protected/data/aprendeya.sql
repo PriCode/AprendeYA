@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-12-2014 a las 21:25:45
+-- Tiempo de generación: 08-12-2014 a las 23:34:20
 -- Versión del servidor: 5.5.35
 -- Versión de PHP: 5.4.35-1+deb.sury.org~precise+1
 
@@ -77,6 +77,7 @@ INSERT INTO `Alumno` (`id_alumno`, `id_usuario`) VALUES
 CREATE TABLE IF NOT EXISTS `Experto` (
   `id_Experto` varchar(5) NOT NULL,
   `nivel_actividad` int(11) DEFAULT NULL,
+  `Calificacion` int(3) NOT NULL,
   `nro_sesion` int(11) DEFAULT NULL,
   `id_aceptacion` varchar(5) DEFAULT NULL,
   `id_usuario` varchar(5) NOT NULL,
@@ -88,9 +89,9 @@ CREATE TABLE IF NOT EXISTS `Experto` (
 -- Volcado de datos para la tabla `Experto`
 --
 
-INSERT INTO `Experto` (`id_Experto`, `nivel_actividad`, `nro_sesion`, `id_aceptacion`, `id_usuario`) VALUES
-('E0001', 5, 12, 'AC001', 'U0002'),
-('E0002', 6, 15, 'AC002', 'U0003');
+INSERT INTO `Experto` (`id_Experto`, `nivel_actividad`, `Calificacion`, `nro_sesion`, `id_aceptacion`, `id_usuario`) VALUES
+('E0001', 5, 1, 12, 'AC001', 'U0002'),
+('E0002', 6, 1, 15, 'AC002', 'U0003');
 
 -- --------------------------------------------------------
 
@@ -273,11 +274,11 @@ CREATE TABLE IF NOT EXISTS `Tema` (
 --
 
 INSERT INTO `Tema` (`id_tema`, `descrip_tema`) VALUES
-('T0001', 'Musica Folclorica'),
-('T0002', 'Musica Clasica'),
-('T0003', 'Fotografia digital'),
-('T0004', 'Serigrafia'),
-('T0005', 'Dibujo dijital');
+('TT001', 'Musica Folclorica'),
+('TT002', 'Musica Clasica'),
+('TT003', 'Fotografia digital'),
+('TT004', 'Serigrafia'),
+('TT005', 'Dibujo dijital');
 
 -- --------------------------------------------------------
 
