@@ -94,7 +94,36 @@ class Experto extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
+	
+	public function listExperto(){
+		//$criteria=new CDbCriteria;
+		//$criteria->join = 'inner join Usuario u on t.id_usuario=u.id_usuario';
+		//$criteria->select = 'u.id_usuario,u.usuario, t.calificacion';
+		//$criteria->select = 'u.*';
+		//$data = $this->findall($criteria);
+	 
+		/*foreach ($data as $key ) {
+				print_r($key->attributes);
+		}
+		exit;*/
+		/*$user = Yii::app()->db->createCommand()
+	        ->select('u.id_usuario, u.usuario,e.calificacion')
+	        ->from('Experto e')
+		->join('Usuario u', 'e.id_usuario=u.id_usuario')
+		->where('e.id_usuario = :value1' , array(':value1' => $value1))	
+		
+		//->where('e.id_usuario=:u.id_usuario')
+		->queryRow();*/
+		$exper=new Experto;
+		$exper=Experto::model()->findAll();
+		$user=array();
+		$user2=new Usuario;
+		foreach($exper as $var){
+			$a=Usuario::model()->findByPk($var->id_usuario);		
+			array_push($user,array('usuario'=>$a->usuario,'calificacion'=>$var->calificacion));
+		}		
+		return array('user'=>$user);
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

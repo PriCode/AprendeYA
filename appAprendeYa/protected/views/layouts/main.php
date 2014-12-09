@@ -33,7 +33,7 @@
 				array('label'=>'Sesiones', 'url'=>array('/sesion', 'view'=>'admin')),
 				array('label'=>'Usuario', 'url'=>array('/usuario', 'view'=>'admin')),
 				array('label'=>'Alumnos por Curso', 'url'=>array('/matricula/test','view'=>'admin')),
-				array('label'=>'Expertos por calificación', 'url'=>array('/experto','view'=>'admin')),
+				array('label'=>'Expertos por calificación', 'url'=>array('/experto/test','view'=>'admin')),
 				array('label'=>'Lista de Alumnos', 'url'=>array('/alumno/list','view'=>'admin')),								
 				array('label'=>'Acerca de nosotros', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),				
