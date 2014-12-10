@@ -98,13 +98,9 @@ class Matricula extends CActiveRecord
 	public function findalumnos(){
 		$criteria = new CDbCriteria;
 		$criteria->join = 'left join Alumno B on t.id_alumno=B.id_alumno';
-		//$criteria->join = 'left join Sesion S on t.id_sesion=S.id_sesion';
 		$criteria->select = 't.id_alumno,t.id_sesion';
-		//S.titulo_sesion,S.desc_sesion
 		$data = $this->findall($criteria);
-		//print_r($data);
 		return $data;
-
 	}
 
 

@@ -7,15 +7,18 @@ class MatriculaController extends Controller
 		$this->render('index');
 	}
 
-
-
 	public function actionTest()
 	{
-	    //$dato = new Alumno;
 	    $matricula = new Matricula;
 	    $dato = $matricula->findalumnos();
-	
-		$this->render('prueba', array('a'=>$dato));
+	    $user=array();
+	    foreach ($dato as $var){
+		$m=Alumno::model()->findByPk($var->id_alumno);
+		$a=Usuario::model()->findByPk($m->id_usuario);
+		$b=Sesion::model()->findByPk($var->id_sesion);
+		array_push($user,array('usuario'=>$a->usuario,'sesion'=>$b->titulo_sesion,'desc_sesion'=>$b->desc_sesion));
+	    }
+	    $this->render('prueba', array('a'=>$user));
 	}
 
 	// Uncomment the following methods and override them if needed
