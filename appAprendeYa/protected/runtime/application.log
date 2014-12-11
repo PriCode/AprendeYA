@@ -5713,3 +5713,93 @@ REQUEST_URI=/AprendeYA/appAprendeYa/index.php?r=matricula/test&view=admin
 in /srv/http/AprendeYA/appAprendeYa/protected/views/matricula/prueba.php (9)
 in /srv/http/AprendeYA/appAprendeYa/protected/controllers/MatriculaController.php (37)
 in /srv/http/AprendeYA/appAprendeYa/index.php (14)
+2014/12/10 20:05:44 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Booster" is invalid. Make sure it points to an existing directory or file.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php:347
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CModule.php(523): CModule->getComponent('booster')
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(163): CModule->preloadComponents()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(125): CApplication->__construct('/home/vagrant/u...')
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/vagrant/u...')
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): YiiBase::createWebApplication('/home/vagrant/u...')
+#7 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=usuario/admin
+---
+2014/12/10 20:06:39 [error] [exception.CException] exception 'CException' with message 'Alias "components.bootstrap.components.Booster" is invalid. Make sure it points to an existing directory or file.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php:347
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(196): YiiBase::import('components.boot...', true)
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CModule.php(523): CModule->getComponent('booster')
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(163): CModule->preloadComponents()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(125): CApplication->__construct('/home/vagrant/u...')
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/vagrant/u...')
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): YiiBase::createWebApplication('/home/vagrant/u...')
+#7 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=usuario/admin
+---
+2014/12/10 20:08:59 [error] [exception.CException] exception 'CException' with message 'Alias "components.bootstrap.components.Booster" is invalid. Make sure it points to an existing directory or file.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php:347
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(196): YiiBase::import('components.boot...', true)
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CModule.php(523): CModule->getComponent('booster')
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(163): CModule->preloadComponents()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(125): CApplication->__construct('/home/vagrant/u...')
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/vagrant/u...')
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): YiiBase::createWebApplication('/home/vagrant/u...')
+#7 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=usuario/admin
+---
+2014/12/10 20:12:12 [error] [exception.CException] exception 'CException' with message 'Alias "application.protected.components.bootstrap.components.Booster" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php:322
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(196): YiiBase::import('application.pro...', true)
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CModule.php(523): CModule->getComponent('booster')
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(163): CModule->preloadComponents()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(125): CApplication->__construct('/home/vagrant/u...')
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/vagrant/u...')
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): YiiBase::createWebApplication('/home/vagrant/u...')
+#7 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=usuario/admin
+---
+2014/12/10 20:12:25 [error] [exception.CException] exception 'CException' with message 'Alias "application.components.bootstrap.components.Booster" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php:322
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(196): YiiBase::import('application.com...', true)
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CModule.php(523): CModule->getComponent('booster')
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(163): CModule->preloadComponents()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(125): CApplication->__construct('/home/vagrant/u...')
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/vagrant/u...')
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): YiiBase::createWebApplication('/home/vagrant/u...')
+#7 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=usuario/admin
+---
+2014/12/10 21:14:16 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/helpers/CHtml.php:103)
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/helpers/CHtml.php(176): renderAttributes()
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/components/booster/widgets/TbNavbar.php(135): openTag()
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CBaseController.php(173): TbNavbar->run()
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/views/layouts/main.php(53): SiteController->widget()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CBaseController.php(126): require()
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#7 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#8 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#9 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#10 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#11 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/views/layouts/column1.php(6): SiteController->endContent()
+#12 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CBaseController.php(126): require()
+#13 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#14 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(784): SiteController->renderFile()
+#15 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/controllers/SiteController.php(36): SiteController->render()
+#16 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#17 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#18 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(286): SiteController->runAction()
+#19 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#20 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#21 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#22 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): CWebApplication->run()
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php
+in /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/components/booster/widgets/TbNavbar.php (135)
+in /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/views/layouts/main.php (53)
+in /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/views/layouts/column1.php (6)

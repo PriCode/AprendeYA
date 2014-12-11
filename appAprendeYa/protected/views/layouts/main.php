@@ -6,58 +6,81 @@
 	<meta name="language" content="en" />
 
 	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
+	<!--<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
+	<![endif]
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+	-->
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body>
 
-<div class="container" id="page">
-
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+<div class="container" id="page">		
 
 	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'Sesiones', 'url'=>array('/sesion', 'view'=>'admin')),
-				array('label'=>'Usuario', 'url'=>array('/usuario', 'view'=>'admin')),
-				array('label'=>'Alumnos por Sesión', 'url'=>array('/matricula/test','view'=>'admin')),
-				array('label'=>'Expertos por calificación', 'url'=>array('/experto/test','view'=>'admin')),
-				array('label'=>'Lista de Alumnos', 'url'=>array('/alumno','view'=>'admin')),								
-				array('label'=>'Acerca de nosotros', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),				
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
+		<?php 
+
+				    echo CHtml::openTag('div');
+				    	$this->widget( 'booster.widgets.TbNavbar',
+							    array(
+							    'type'=>'inverse',							   							    
+							    'brand'=>'Aprende-Ya',
+							    'brandOptions' => array('style' => 'width:auto;margin-left: 0px;'),
+							    'fixed' => 'top',
+							    'fluid' => true,
+							    'htmlOptions' => array('style' => 'position:relative; top:15px;'),
+							    'items' => array(
+							    array(
+							    'class' => 'booster.widgets.TbMenu',
+							    'type' => 'navbar',
+							    'items' => array(
+									array('label'=>'Inicio', 'url'=>array('/site/index')),
+									array('label'=>'Sesiones', 'url'=>array('/sesion', 'view'=>'admin')),
+									array('label'=>'Usuario', 'url'=>array('/usuario', 'view'=>'admin')),
+									array('label'=>'Alumnos por Sesión', 'url'=>array('/matricula/test','view'=>'admin')),
+									array('label'=>'Expertos por calificación', 'url'=>array('/experto/test','view'=>'admin')),
+									array('label'=>'Lista de Alumnos', 'url'=>array('/alumno','view'=>'admin')),								
+									array('label'=>'Acerca de nosotros', 'url'=>array('/site/page', 'view'=>'about')),
+									array('label'=>'Contact', 'url'=>array('/site/contact')),				
+									array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+									array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				    			)))));
+
+				echo CHtml::closeTag('div');
+ ?>
 	</div><!-- mainmenu -->
+		
+
+
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
 
-	<?php echo $content; ?>
+
+	<div class="container">
+			<?php echo $content; ?>
+	</div>
 
 	<div class="clear"></div>
 
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
 
+
+<footer class="footer">
+    <div class="container">
+        <p class="powered">
+            Powered by <a target="_blank" href="http://www.yiiframework.com/extension/bootstrap">Yii-Bootstrap</a>
+        </p>Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/></p>
+    </div>
+</footer>
+	
 </div><!-- page -->
 
 </body>

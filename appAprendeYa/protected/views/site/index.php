@@ -4,10 +4,63 @@ $this->pageTitle=Yii::app()->name;
 ?>
 
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<header class="masthead subhead" >
+<center>
+		    <div class="container">		    
+		        <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+				<p>Aqui podras aprender todos los temas de tu interes con los mejores expertos del pais</p>
+				<p>Ven y echa un visazo a las proximas sesiones!!!</p>
+		    </div>
+</center>
+</header>
 
-<p>Aqui podras aprender todos los temas de tu interes con los mejores expertos del pais</p>
-<p>Ven y echa un visazo a las proximas sesiones!!!</p>
+<div class="container" style="width=800px; height=400px;">		    
+  <?php  $this->widget('booster.widgets.TbCarousel',
+    array(
+	    'items' => array(
+	    array(
+	    'image' => 'assets/img/intro.gif',	    
+	    'label' => 'First Thumbnail label',
+	    'caption' => 'First Caption.'
+	    ),
+	    array(
+	    'image' => 'assets/img/intro.gif',
+	    'label' => 'Second Thumbnail label',
+	    'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
+	    ),
+	    array(
+	    'image' => 'assets/img/intro.gif',
+	    'label' => 'Third Thumbnail label',
+	    'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
+    	),
+		'htmlOptions'=> array('style'=>'width:800px; height:400px;')
+    	),
+    	
+
+	));
+
+?>
+</div>		    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <h3>Lista de sesiones proximas</h3>
