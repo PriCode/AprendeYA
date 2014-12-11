@@ -1,5 +1,6 @@
 -- MySQL dump 10.15  Distrib 10.0.14-MariaDB, for Linux (x86_64)
 --
+<<<<<<< HEAD:appAprendeYa/protected/data/aprendeya.sql~
 -- Servidor: localhost
 -- Tiempo de generación: 08-12-2014 a las 23:34:20
 -- Versión del servidor: 5.5.35
@@ -8,6 +9,11 @@
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+=======
+-- Host: localhost    Database: aprendeya
+-- ------------------------------------------------------
+-- Server version	10.0.14-MariaDB-log
+>>>>>>> develop:appAprendeYa/protected/data/aprendeya.sql
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -85,7 +91,10 @@ DROP TABLE IF EXISTS `Experto`;
 CREATE TABLE `Experto` (
   `id_Experto` varchar(5) NOT NULL,
   `nivel_actividad` int(11) DEFAULT NULL,
+<<<<<<< HEAD:appAprendeYa/protected/data/aprendeya.sql~
   `calificacion` int(3) NOT NULL,
+=======
+>>>>>>> develop:appAprendeYa/protected/data/aprendeya.sql
   `nro_sesion` int(11) DEFAULT NULL,
   `id_aceptacion` varchar(5) DEFAULT NULL,
   `id_usuario` varchar(5) NOT NULL,
@@ -98,9 +107,13 @@ CREATE TABLE `Experto` (
 -- Dumping data for table `Experto`
 --
 
+<<<<<<< HEAD:appAprendeYa/protected/data/aprendeya.sql~
 
+=======
+>>>>>>> develop:appAprendeYa/protected/data/aprendeya.sql
 LOCK TABLES `Experto` WRITE;
 UNLOCK TABLES;
+<<<<<<< HEAD:appAprendeYa/protected/data/aprendeya.sql~
 
 INSERT INTO `Experto` (`id_Experto`, `nivel_actividad`, `calificacion`, `nro_sesion`, `id_aceptacion`, `id_usuario`) VALUES
 ('E0001', 5, 1, 12, 'AC001', 'U0002'),
@@ -108,6 +121,8 @@ INSERT INTO `Experto` (`id_Experto`, `nivel_actividad`, `calificacion`, `nro_ses
 
 -- --------------------------------------------------------
 
+=======
+>>>>>>> develop:appAprendeYa/protected/data/aprendeya.sql
 
 --
 -- Table structure for table `Experto_Referencias`
@@ -294,12 +309,16 @@ CREATE TABLE `Tema` (
 -- Dumping data for table `Tema`
 --
 
+<<<<<<< HEAD:appAprendeYa/protected/data/aprendeya.sql~
 
+=======
+>>>>>>> develop:appAprendeYa/protected/data/aprendeya.sql
 LOCK TABLES `Tema` WRITE;
 /*!40000 ALTER TABLE `Tema` DISABLE KEYS */;
 INSERT INTO `Tema` VALUES ('T0001','Musica Folclorica'),('T0002','Musica Clasica'),('T0003','Fotografia digital'),('T0004','Serigrafia'),('T0005','Dibujo dijital');
 /*!40000 ALTER TABLE `Tema` ENABLE KEYS */;
 UNLOCK TABLES;
+<<<<<<< HEAD:appAprendeYa/protected/data/aprendeya.sql~
 
 INSERT INTO `Tema` (`id_tema`, `descrip_tema`) VALUES
 ('TT001', 'Musica Folclorica'),
@@ -310,6 +329,8 @@ INSERT INTO `Tema` (`id_tema`, `descrip_tema`) VALUES
 
 -- --------------------------------------------------------
 
+=======
+>>>>>>> develop:appAprendeYa/protected/data/aprendeya.sql
 
 --
 -- Table structure for table `Tipo_sesion`
@@ -427,4 +448,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-12-09 12:00:21
+-- Dump completed on 2014-12-10 21:09:35

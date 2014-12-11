@@ -7,10 +7,10 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Aplicacion Aprende-YA!',
+	'name'=>'Aplicacion Aprende-YA!',	
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array('log','booster'),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -36,6 +36,7 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		'booster'=>array('class'=>'application.components.booster.components.Booster'),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
