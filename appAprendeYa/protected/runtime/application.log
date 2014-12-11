@@ -5713,3 +5713,135 @@ REQUEST_URI=/AprendeYA/appAprendeYa/index.php?r=matricula/test&view=admin
 in /srv/http/AprendeYA/appAprendeYa/protected/views/matricula/prueba.php (9)
 in /srv/http/AprendeYA/appAprendeYa/protected/controllers/MatriculaController.php (37)
 in /srv/http/AprendeYA/appAprendeYa/index.php (14)
+2014/12/10 19:09:07 [error] [exception.CException] exception 'CException' with message 'Property "Experto.calificacion" is not defined.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('calificacion')
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/models/Experto.php(105): CActiveRecord->__get('calificacion')
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/controllers/ExpertoController.php(18): Experto->listExperto()
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/actions/CInlineAction.php(49): ExpertoController->actionTest()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(282): CController->run('test')
+#13 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('experto/test')
+#14 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=experto/test&view=admin
+HTTP_REFERER=http://uni.dev/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=site/login
+---
+2014/12/10 19:09:50 [error] [exception.CException] exception 'CException' with message 'Property "Experto.calificacion" is not defined.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('calificacion')
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/models/Experto.php(105): CActiveRecord->__get('calificacion')
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/controllers/ExpertoController.php(18): Experto->listExperto()
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/actions/CInlineAction.php(49): ExpertoController->actionTest()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(282): CController->run('test')
+#13 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('experto/test')
+#14 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=experto/test&view=admin
+HTTP_REFERER=http://uni.dev/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=alumno&view=admin
+---
+2014/12/10 19:10:14 [error] [exception.CException] exception 'CException' with message 'Property "Experto.calificacion" is not defined.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('calificacion')
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/models/Experto.php(105): CActiveRecord->__get('calificacion')
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/controllers/ExpertoController.php(18): Experto->listExperto()
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/actions/CInlineAction.php(49): ExpertoController->actionTest()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(282): CController->run('test')
+#13 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('experto/test')
+#14 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=experto/test&view=admin
+HTTP_REFERER=http://uni.dev/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=alumno&view=admin
+---
+2014/12/10 19:12:04 [error] [exception.CException] exception 'CException' with message 'Property "Experto.calificacion" is not defined.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('calificacion')
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/models/Experto.php(105): CActiveRecord->__get('calificacion')
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/controllers/ExpertoController.php(18): Experto->listExperto()
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/actions/CInlineAction.php(49): ExpertoController->actionTest()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(282): CController->run('test')
+#13 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('experto/test')
+#14 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=experto/test&view=admin
+HTTP_REFERER=http://uni.dev/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=alumno&view=admin
+---
+2014/12/10 19:19:35 [error] [exception.CException] exception 'CException' with message 'Property "Experto.calificacion" is not defined.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('calificacion')
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/models/Experto.php(105): CActiveRecord->__get('calificacion')
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/controllers/ExpertoController.php(18): Experto->listExperto()
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/actions/CInlineAction.php(49): ExpertoController->actionTest()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(282): CController->run('test')
+#13 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('experto/test')
+#14 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=experto/test&view=admin
+HTTP_REFERER=http://uni.dev/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=alumno&view=admin
+---
+2014/12/10 19:19:39 [error] [exception.CException] exception 'CException' with message 'Property "Experto.calificacion" is not defined.' in /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('calificacion')
+#1 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/models/Experto.php(105): CActiveRecord->__get('calificacion')
+#2 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/protected/controllers/ExpertoController.php(18): Experto->listExperto()
+#3 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/actions/CInlineAction.php(49): ExpertoController->actionTest()
+#4 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(282): CController->run('test')
+#13 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('experto/test')
+#14 /home/vagrant/uni/aprendeYa2/AprendeYA/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/vagrant/uni/aprendeYa2/AprendeYA/appAprendeYa/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=experto/test&view=admin
+HTTP_REFERER=http://uni.dev/aprendeYa2/AprendeYA/appAprendeYa/index.php?r=alumno&view=admin
+---
