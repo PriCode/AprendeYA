@@ -42,42 +42,105 @@ $this->pageTitle=Yii::app()->name;
 ?>
 </div>		    
 
+<?php 
+/*
+$this->widget(
+'booster.widgets.TbTabs',
+array(
+'type' => 'tabs',
+'justified' => true,
+'tabs' => $tabs
+)
+);
+*/
+?>
 
 
+<?php
+	class Item3{
 
+	public $titulo;	
+	public $descripcion;
+	}
 
+$items= array();
+$i=0;
+foreach ($sesiones as $key) {
+	$mark = new Item3();
+	$mark->id=++$i;
+    $mark->titulo = $key->titulo_sesion;    
+    $mark->descripcion =$key->desc_sesion;   
+	$items[]=$mark;
+}
+    // $gridDataProvider
+   
+     
+    $gridDataProvider = new CArrayDataProvider($items);
+     
+    // $gridColumns
+    $gridColumns = array(
+    array('name'=>'id', 'header'=>'#', 'htmlOptions'=>array('style'=>'width: 60px')),
+    array('name'=>'titulo', 'header'=>'Titulo'),
+    array('name'=>'descripcion', 'header'=>'Sesión'),    
+    array(
+    'htmlOptions' => array('nowrap'=>'nowrap'),
+    'class'=>'booster.widgets.TbButtonColumn',
+    'viewButtonUrl'=>null,
+    'updateButtonUrl'=>null,
+    'deleteButtonUrl'=>null,
+    )
+    );
+     
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ?>
 
 <h3>Lista de sesiones proximas</h3>
+<?php
 
-<div>
-<table width="210px" border="solid"><thead><td>Titulo</td><td> Descripcion</td></thead>
-<?php  	
-	$html="";
-	foreach ($sesiones as $key) {
-		$html.="<tr><td>".$key->titulo_sesion."</td><td>".$key->desc_sesion."</td></tr>"; 	
-	}	
-	echo $html;
+    $this->widget('booster.widgets.TbGridView', array(
+    'type' => 'striped bordered condensed',
+    'dataProvider' => $gridDataProvider,
+    'template' => "{items}",    
+    'columns' => $gridColumns,
+    ));
+//'filter' => $person->search(),
 ?>
-</table>
-</div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <h3>Nuestros  Expertos	</h3>
 
 <div>
@@ -91,13 +154,8 @@ $this->pageTitle=Yii::app()->name;
 ?>
 </table>
 </div>
+-->
 
-<h3>un  Expertos	</h3>
-<?php
-
-	echo var_dump($nombre_expertos);
-
-?>
 
 
 
