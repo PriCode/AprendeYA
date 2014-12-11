@@ -1,19 +1,8 @@
 -- MySQL dump 10.15  Distrib 10.0.14-MariaDB, for Linux (x86_64)
 --
-<<<<<<< HEAD
 -- Host: localhost    Database: aprendeya
 -- ------------------------------------------------------
 -- Server version	10.0.14-MariaDB-log
-=======
--- Servidor: localhost
--- Tiempo de generación: 08-12-2014 a las 23:34:20
--- Versión del servidor: 5.5.35
--- Versión de PHP: 5.4.35-1+deb.sury.org~precise+1
-
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
->>>>>>> 0d36dc006242a8234120d8facbabe44702a3ad9f
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -91,7 +80,6 @@ DROP TABLE IF EXISTS `Experto`;
 CREATE TABLE `Experto` (
   `id_Experto` varchar(5) NOT NULL,
   `nivel_actividad` int(11) DEFAULT NULL,
-  `Calificacion` int(3) NOT NULL,
   `nro_sesion` int(11) DEFAULT NULL,
   `id_aceptacion` varchar(5) DEFAULT NULL,
   `id_usuario` varchar(5) NOT NULL,
@@ -105,19 +93,11 @@ CREATE TABLE `Experto` (
 -- Dumping data for table `Experto`
 --
 
-<<<<<<< HEAD
 LOCK TABLES `Experto` WRITE;
 /*!40000 ALTER TABLE `Experto` DISABLE KEYS */;
 INSERT INTO `Experto` VALUES ('E0001',5,12,'AC001','U0002',4.00),('E0002',6,15,'AC002','U0003',3.00);
 /*!40000 ALTER TABLE `Experto` ENABLE KEYS */;
 UNLOCK TABLES;
-=======
-INSERT INTO `Experto` (`id_Experto`, `nivel_actividad`, `Calificacion`, `nro_sesion`, `id_aceptacion`, `id_usuario`) VALUES
-('E0001', 5, 1, 12, 'AC001', 'U0002'),
-('E0002', 6, 1, 15, 'AC002', 'U0003');
-
--- --------------------------------------------------------
->>>>>>> 0d36dc006242a8234120d8facbabe44702a3ad9f
 
 --
 -- Table structure for table `Experto_Referencias`
@@ -304,22 +284,11 @@ CREATE TABLE `Tema` (
 -- Dumping data for table `Tema`
 --
 
-<<<<<<< HEAD
 LOCK TABLES `Tema` WRITE;
 /*!40000 ALTER TABLE `Tema` DISABLE KEYS */;
 INSERT INTO `Tema` VALUES ('T0001','Musica Folclorica'),('T0002','Musica Clasica'),('T0003','Fotografia digital'),('T0004','Serigrafia'),('T0005','Dibujo dijital');
 /*!40000 ALTER TABLE `Tema` ENABLE KEYS */;
 UNLOCK TABLES;
-=======
-INSERT INTO `Tema` (`id_tema`, `descrip_tema`) VALUES
-('TT001', 'Musica Folclorica'),
-('TT002', 'Musica Clasica'),
-('TT003', 'Fotografia digital'),
-('TT004', 'Serigrafia'),
-('TT005', 'Dibujo dijital');
-
--- --------------------------------------------------------
->>>>>>> 0d36dc006242a8234120d8facbabe44702a3ad9f
 
 --
 -- Table structure for table `Tipo_sesion`
@@ -437,4 +406,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-12-09 12:00:21
+-- Dump completed on 2014-12-10 21:09:35
